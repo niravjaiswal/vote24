@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './home';
+import { Route } from "wouter";
+import Policies from './Policies'
+import Candidates from './candidates';
+import Map from './Map';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route path="/" component={Home} />
+      <Route path="/policies" component={Policies} />
+      <Route path="/candidates" component={Candidates} />
+      <Route path="/map" component={Map} />
     </div>
   );
 }
